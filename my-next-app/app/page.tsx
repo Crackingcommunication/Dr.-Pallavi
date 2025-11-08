@@ -1,65 +1,139 @@
-import Image from "next/image";
+import {
+  Laptop,
+  Video,
+  Home,
+  Users,
+  School,
+  BookOpen,
+} from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+
+      {/* NAVBAR */}
+      <nav className="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#benefits-online">Online</a></li>
+          <li><a href="#benefits-offline">Offline</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      {/* HERO SECTION — REAL RANDOM IMAGES */}
+      <section id="hero" className="hero-carousel">
+        <div className="slides">
+
+          <div className="slide">
+            <img src="https://source.unsplash.com/1200x700/?students,classroom" alt="Hero 1" />
+          </div>
+
+          <div className="slide">
+            <img src="https://source.unsplash.com/1200x700/?teacher,education" alt="Hero 2" />
+          </div>
+
+          <div className="slide">
+            <img src="https://source.unsplash.com/1200x700/?study,learning" alt="Hero 3" />
+          </div>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* BENEFITS OF ONLINE */}
+      <section id="benefits-online" className="section benefits">
+        <h2>Benefits of Online Learning</h2>
+
+        <div className="benefits-container">
+
+          <div className="benefit-card icon-card">
+            <Laptop size={60} strokeWidth={1.5} className="icon" />
+            <h3>Learn from Anywhere</h3>
+            <p>Attend classes from your home or while traveling.</p>
+          </div>
+
+          <div className="benefit-card icon-card">
+            <Video size={60} strokeWidth={1.5} className="icon" />
+            <h3>Recorded + Live Classes</h3>
+            <p>Rewatch lectures anytime for better revision.</p>
+          </div>
+
+          <div className="benefit-card icon-card">
+            <Home size={60} strokeWidth={1.5} className="icon" />
+            <h3>Comfort & Focus</h3>
+            <p>Study in your own peaceful environment.</p>
+          </div>
+
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* BENEFITS OF OFFLINE */}
+      <section id="benefits-offline" className="section benefits">
+        <h2>Benefits of Offline Learning</h2>
+
+        <div className="benefits-container">
+
+          <div className="benefit-card icon-card">
+            <ChalkboardTeacher size={60} strokeWidth={1.5} className="icon" />
+            <h3>Direct Teacher Support</h3>
+            <p>Get help instantly, face to face.</p>
+          </div>
+
+          <div className="benefit-card icon-card">
+            <School size={60} strokeWidth={1.5} className="icon" />
+            <h3>Structured Routine</h3>
+            <p>Class timing builds discipline and consistency.</p>
+          </div>
+
+          <div className="benefit-card icon-card">
+            <Users size={60} strokeWidth={1.5} className="icon" />
+            <h3>Peer Group Learning</h3>
+            <p>Study along with others for better motivation.</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <section id="contact" className="footer">
+        <div className="footer-container">
+
+          <div className="footer-col">
+            <h3>Career Carnival Academy</h3>
+            <p>Shaping confident, skilled, and successful learners.</p>
+          </div>
+
+          <div className="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#benefits-online">Online</a></li>
+              <li><a href="#benefits-offline">Offline</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Contact</h4>
+            <p>📍 Your City</p>
+            <p>📞 +91 90000 00000</p>
+            <p>✉️ info@careercarnival.com</p>
+          </div>
+
+          <div className="footer-col">
+            <h4>Follow</h4>
+            <p><a href="#">Instagram</a></p>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">YouTube</a></p>
+          </div>
+
+        </div>
+
+        <div className="footer-bottom">
+          © {new Date().getFullYear()} Career Carnival Academy · All Rights Reserved
+        </div>
+      </section>
+
+    </main>
   );
 }
