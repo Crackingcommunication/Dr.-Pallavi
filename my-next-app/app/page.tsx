@@ -1,7 +1,7 @@
 import {
   Laptop,
   Video,
-  Home,
+  Home as HomeIcon,
   Users,
   School,
   BookOpen,
@@ -21,7 +21,7 @@ export default function Home() {
         </ul>
       </nav>
 
-      {/* HERO SECTION — REAL RANDOM IMAGES */}
+      {/* HERO SECTION */}
       <section id="hero" className="hero-carousel">
         <div className="slides">
 
@@ -49,19 +49,19 @@ export default function Home() {
           <div className="benefit-card icon-card">
             <Laptop size={60} strokeWidth={1.5} className="icon" />
             <h3>Learn from Anywhere</h3>
-            <p>Attend classes from your home or while traveling.</p>
+            <p>Attend classes from home or while traveling.</p>
           </div>
 
           <div className="benefit-card icon-card">
             <Video size={60} strokeWidth={1.5} className="icon" />
-            <h3>Recorded + Live Classes</h3>
-            <p>Rewatch lectures anytime for better revision.</p>
+            <h3>Live + Recorded Lessons</h3>
+            <p>Rewatch lectures anytime for revision & clarity.</p>
           </div>
 
           <div className="benefit-card icon-card">
-            <Home size={60} strokeWidth={1.5} className="icon" />
+            <HomeIcon size={60} strokeWidth={1.5} className="icon" />
             <h3>Comfort & Focus</h3>
-            <p>Study in your own peaceful environment.</p>
+            <p>Study in a peaceful and personal environment.</p>
           </div>
 
         </div>
@@ -74,21 +74,21 @@ export default function Home() {
         <div className="benefits-container">
 
           <div className="benefit-card icon-card">
-            <ChalkboardTeacher size={60} strokeWidth={1.5} className="icon" />
-            <h3>Direct Teacher Support</h3>
-            <p>Get help instantly, face to face.</p>
+            <BookOpen size={60} strokeWidth={1.5} className="icon" />
+            <h3>Direct Teacher Help</h3>
+            <p>Get answers instantly with face-to-face guidance.</p>
           </div>
 
           <div className="benefit-card icon-card">
             <School size={60} strokeWidth={1.5} className="icon" />
             <h3>Structured Routine</h3>
-            <p>Class timing builds discipline and consistency.</p>
+            <p>A proper schedule builds strong study habits.</p>
           </div>
 
           <div className="benefit-card icon-card">
             <Users size={60} strokeWidth={1.5} className="icon" />
-            <h3>Peer Group Learning</h3>
-            <p>Study along with others for better motivation.</p>
+            <h3>Peer Group Motivation</h3>
+            <p>Study with others for confidence and teamwork.</p>
           </div>
 
         </div>
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
 
           <div className="footer-col">
-            <h4>Follow</h4>
+            <h4>Follow Us</h4>
             <p><a href="#">Instagram</a></p>
             <p><a href="#">Facebook</a></p>
             <p><a href="#">YouTube</a></p>
